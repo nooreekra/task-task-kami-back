@@ -17,10 +17,8 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = require("./cnb-1-main/config");
 const app_1 = require("./cnb-1-main/app");
 const routes_1 = require("./cnb-1-main/routes");
-require('dotenv').config();
-const cors = require('cors');
 const app = express_1.default();
-app_1.appUse(cors());
+app_1.appUse(app);
 routes_1.routes(app);
 mongoose_1.default.connect(config_1.MongoDBUris, {
     useNewUrlParser: true,

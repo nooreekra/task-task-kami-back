@@ -3,11 +3,10 @@ import mongoose from 'mongoose';
 import {MongoDBUris, PORT} from './cnb-1-main/config';
 import {appUse} from './cnb-1-main/app';
 import {routes} from './cnb-1-main/routes';
-require('dotenv').config()
-const cors = require('cors')
+
 const app = express();
 
-appUse(cors());
+appUse(app);
 routes(app);
 
 mongoose.connect(MongoDBUris, {
