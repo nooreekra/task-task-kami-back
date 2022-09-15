@@ -13,7 +13,7 @@ const products = express_1.default.Router();
 products.get("/get-all", getProducts_1.getProducts);
 products.get("/get-one", getProductById_1.getProductById);
 products.post("/create", createProducts_1.createProducts);
-products.put("/edit", updateProduct_1.updateProduct);
+products.put("/update", updateProduct_1.updateProduct);
 products.post("/delete", deleteProduct_1.deleteProduct);
 exports.default = products;
 //# sourceMappingURL=index.js.map

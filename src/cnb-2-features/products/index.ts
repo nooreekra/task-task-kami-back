@@ -10,7 +10,7 @@ const products = express.Router();
 products.get("/get-all", getProducts);
 products.get("/get-one", getProductById);
 products.post("/create", createProducts);
-products.put("/edit", updateProduct);
+products.put("/update", updateProduct);
 products.post("/delete", deleteProduct);
 
 
