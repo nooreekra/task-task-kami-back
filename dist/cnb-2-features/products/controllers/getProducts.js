@@ -22,7 +22,7 @@ exports.getProducts = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         const title = req.query.search ? req.query.search : '';
         try {
             const products = yield product_1.default.find({ title: new RegExp(title, "gi") })
-                .limit(per)
+                .limit(100)
                 .skip(skip)
                 .exec();
             res.status(200)

@@ -12,13 +12,9 @@ export interface IProduct extends Document {
     isActive: boolean;
     isSinglePrice: boolean;
     price: number;
-    priceByCity: PriceByCity;
+    priceByCity: PriceByCity[];
 }
 
-const PriceByCitySchema = new Schema({
-    id: Number,
-    price: Number
-});
 
 const UserSchema: Schema = new Schema(
     {
@@ -46,7 +42,7 @@ const UserSchema: Schema = new Schema(
             type: Number,
         },
         priceByCity: {
-            type: PriceByCitySchema,
+            type: Array,
         }
     },
 );

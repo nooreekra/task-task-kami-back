@@ -20,10 +20,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
-const PriceByCitySchema = new mongoose_1.Schema({
-    id: Number,
-    price: Number
-});
 const UserSchema = new mongoose_1.Schema({
     title: {
         type: String,
@@ -49,7 +45,7 @@ const UserSchema = new mongoose_1.Schema({
         type: Number,
     },
     priceByCity: {
-        type: PriceByCitySchema,
+        type: Array,
     }
 });
 exports.default = mongoose_1.default.model('product', UserSchema);

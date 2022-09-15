@@ -9,7 +9,7 @@ export const getProducts = async (req: Request, res: Response) => {
         const title = req.query.search ?  req.query.search as string : ''
         try {
             const products = await Product.find({title: new RegExp(title, "gi")})
-                .limit(per)
+                .limit(100)
                 .skip(skip)
                 .exec();
     
